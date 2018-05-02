@@ -1,5 +1,4 @@
 import Header from "grommet/components/Header";
-import SkipLinkAnchor from "grommet/components/SkipLinkAnchor";
 import Sidebar from "grommet/components/Sidebar";
 import Title from "grommet/components/Title";
 import Box from "grommet/components/Box";
@@ -45,6 +44,7 @@ import Chart, {
 } from "grommet/components/chart/Chart";
 import User from "grommet/components/icons/base/User";
 import CloseIcon from "grommet/components/icons/base/Close";
+import Edit from "grommet/components/icons/base/Edit";
 
 export default () => (
   <div>
@@ -55,30 +55,32 @@ export default () => (
         type="text/css"
       />
     </Head>
-    <Sidebar size="small" colorIndex="light-2">
-      <SkipLinkAnchor label="Right Panel" />
-      <Header
-        pad={{ horizontal: "medium", vertical: "medium" }}
-        justify="between"
-        size="large"
-      />
-      <Menu responsive={true} icon={<User />} label="Label">
-        <Button
-          align="start"
-          label="Todo"
-          onClick={() => {}}
-          href="#"
-          path="/todo"
-        />
-        <Button align="start" label="a" onClick={() => {}} href="#" path="/a" />
-        <Button
-          align="start"
-          label="Home"
-          onClick={() => {}}
-          href="#"
-          path="/"
-        />
-      </Menu>
-    </Sidebar>
+    <Split flex="right" separator={true}>
+      <Box colorIndex="light-1" justify="center" align="center" pad="none">
+        <Sidebar colorIndex="light-1">
+          <Header pad="medium" justify="between">
+            <Title>BiMAP v0.10.1</Title>
+          </Header>
+          <Box flex="grow" justify="start">
+            <Menu primary={true}>
+              <Anchor
+                href="#"
+                //  className='active'
+              >
+                First
+              </Anchor>
+              
+              <Anchor href="#">Third</Anchor>
+            </Menu>
+          </Box>
+          <Footer pad="medium">
+            <Button icon={<User />} />
+          </Footer>
+        </Sidebar>
+      </Box>
+      <Box colorIndex="light-2" justify="center" align="center" pad="node">
+        ii
+      </Box>
+    </Split>
   </div>
 );
