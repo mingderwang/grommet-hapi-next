@@ -1,4 +1,5 @@
 import Header from "grommet/components/Header";
+import Sidebar from "grommet/components/Sidebar";
 import Title from "grommet/components/Title";
 import Box from "grommet/components/Box";
 import Search from "grommet/components/Search";
@@ -29,6 +30,8 @@ import Table from "grommet/components/Table";
 import TableRow from "grommet/components/TableRow";
 import FormField from "grommet/components/FormField";
 import Layer from "grommet/components/Layer";
+import Section from "grommet/components/Section";
+import Select from "grommet/components/Select";
 import Chart, {
   Axis,
   Grid,
@@ -39,9 +42,12 @@ import Chart, {
   MarkerLabel,
   HotSpots
 } from "grommet/components/chart/Chart";
+import User from "grommet/components/icons/base/User";
+import CloseIcon from "grommet/components/icons/base/Close";
+import Edit from "grommet/components/icons/base/Edit";
 
 export default () => (
-<div>
+  <div>
     <Head>
       <link
         href="//cdnjs.cloudflare.com/ajax/libs/grommet/1.0.1/grommet.min.css"
@@ -49,21 +55,32 @@ export default () => (
         type="text/css"
       />
     </Head>
-    <App>
-      <Split>
-        <Box colorIndex='neutral-1'
-          justify='center'
-          align='center'
-          pad='medium'>
-          Left Side
-        </Box>
-        <Box colorIndex='neutral-2'
-          justify='center'
-          align='center'
-          pad='medium'>
-          Right Side
-        </Box>
-      </Split>
-    </App>
-</div>
+    <Split flex="right" separator={true}>
+      <Box colorIndex="light-1" justify="center" align="center" pad="none">
+        <Sidebar colorIndex="light-1">
+          <Header pad="medium" justify="between">
+            <Title>BiMAP v0.10.1</Title>
+          </Header>
+          <Box flex="grow" justify="start">
+            <Menu primary={true}>
+              <Anchor
+                href="#"
+                //  className='active'
+              >
+                First
+              </Anchor>
+              
+              <Anchor href="#">Third</Anchor>
+            </Menu>
+          </Box>
+          <Footer pad="medium">
+            <Button icon={<User />} />
+          </Footer>
+        </Sidebar>
+      </Box>
+      <Box colorIndex="light-2" justify="center" align="center" pad="node">
+        ii
+      </Box>
+    </Split>
+  </div>
 );

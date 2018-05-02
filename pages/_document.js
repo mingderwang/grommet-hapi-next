@@ -22,7 +22,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script defer src="https://code.getmdl.io/1.3.0/material.min.js" />
         </body>
       </html>
     );
