@@ -1,0 +1,19 @@
+{
+  "name": "grommet-hapi-next",
+  "version": "0.0.1",
+  "description": "A next.js boilerplate with hapi server and grommet ui",
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ming-der Wang <ming@log4analytics.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hapi-nextjs": "^0.1.1",
+    "next": "^6.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
