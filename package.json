@@ -4,16 +4,26 @@
   "description": "A next.js boilerplate with hapi server and grommet ui",
   "scripts": {
     "dev": "node server.js",
+    "check": "./node_modules/.bin/eslint .",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "nextjs",
+    "react",
+    "hapi"
+  ],
   "author": "Ming-der Wang <ming@log4analytics.com>",
   "license": "MIT",
   "dependencies": {
     "hapi": "^17.1.1",
     "next": "^6.0.0",
+    "node-pre-gyp": "^0.10.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
-  }
+  },
+  "pre-commit": [
+    "check"
+  ]
 }
