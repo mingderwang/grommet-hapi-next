@@ -9,13 +9,7 @@
     "build": "next build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "nextjs",
-    "react",
-    "hapi",
-    "starter",
-    "redux"
-  ],
+  "keywords": ["nextjs", "react", "hapi", "starter", "redux"],
   "author": "Ming-der Wang <ming@log4analytics.com>",
   "license": "MIT",
   "dependencies": {
@@ -28,7 +22,5 @@
     "react-redux": "^5.0.7",
     "redux": "^4.0.0"
   },
-  "pre-commit": [
-    "check"
-  ]
+  "pre-commit": ["check"]
 }
