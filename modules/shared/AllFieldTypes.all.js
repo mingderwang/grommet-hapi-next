@@ -71,9 +71,6 @@ export default class AllFieldTypes extends Component {
     const { boolean, date, number, option, suggestions, text } = this.state;
     return (
       <Form>
-        <Header>
-          <Heading>修改設定後, 請按 [ Submit ]</Heading>
-        </Header>
         <FormFields>
           <fieldset>
             <legend>Text</legend>
@@ -219,14 +216,14 @@ export default class AllFieldTypes extends Component {
             </FormField>
           </fieldset>
         </FormFields>
-        <Footer pad={{ vertical: "medium" }}>
+        <Header pad={{ vertical: "medium" }}>
           <Button
             label="Submit"
             type="submit"
             primary={true}
             onClick={() => {}}
           />
-        </Footer>
+        </Header>
       </Form>
     );
   }

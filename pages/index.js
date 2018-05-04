@@ -15,7 +15,7 @@ export class Index extends Component {
         <div>
           <Split flex="right" fixed={false}>
             <NavSidebar colorIndex="light-1" dropAlign={{ bottom: "top" }} />
-            <MainPage index={url.query.dateTime}/>
+            <MainPage index={url.query.date}/>
           </Split>
         </div>
       </Provider>

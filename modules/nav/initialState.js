@@ -8,5 +8,5 @@ export default {
       { path: "/dashboard", label: "Dashboard" },
       { path: "/tasks", label: "Tasks" }
     ]
-  }
+  },
 };

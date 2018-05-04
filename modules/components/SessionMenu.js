@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-import Menu from 'grommet/components/Menu';
-import Anchor from 'grommet/components/Anchor';
-import Box from 'grommet/components/Box';
-import Heading from 'grommet/components/Heading';
-import UserIcon from 'grommet/components/icons/base/User';
+import Menu from "grommet/components/Menu";
+import Anchor from "grommet/components/Anchor";
+import Box from "grommet/components/Box";
+import Heading from "grommet/components/Heading";
+import UserIcon from "grommet/components/icons/base/User";
 import Head from "next/head";
 
-import { logout } from '~/session/actions';
+import { logout } from "~/session/actions";
 
 class SessionMenu extends Component {
   constructor() {
@@ -22,31 +22,35 @@ class SessionMenu extends Component {
     event.preventDefault();
     this.props.dispatch(logout(session));
   }
-  
+
   render() {
-    console.log(this.props.session)
-    console.log('ming')
-    const { dropAlign, colorIndex, session: { name: userName } } = this.props;
+    const {
+      dropAlign,
+      colorIndex,
+      session: { name: userName }
+    } = this.props;
     return (
-        <div>
+      <div>
         <Head>
-        <link
-          href="//cdnjs.cloudflare.com/ajax/libs/grommet/1.0.1/grommet.min.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-      </Head>
-      <Menu
-        icon={<UserIcon />}
-        dropAlign={dropAlign}
-        colorIndex={colorIndex}
-        a11yTitle='Session'
-      >
-        <Box pad='medium'>
-          <Heading tag='h3' margin='none'>{userName}</Heading>
-        </Box>
-        <Anchor href='#' onClick={this._onLogout} label='Logout' />
-      </Menu>
+          <link
+            href="//cdnjs.cloudflare.com/ajax/libs/grommet/1.0.1/grommet.min.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+        </Head>
+        <Menu
+          icon={<UserIcon />}
+          dropAlign={dropAlign}
+          colorIndex={colorIndex}
+          a11yTitle="Session"
+        >
+          <Box pad="medium">
+            <Heading tag="h3" margin="none">
+              {userName}
+            </Heading>
+          </Box>
+          <Anchor href="#" onClick={this._onLogout} label="登出" />
+        </Menu>
       </div>
     );
   }
@@ -55,7 +59,7 @@ class SessionMenu extends Component {
 SessionMenu.defaultProps = {
   colorIndex: undefined,
   dropAlign: undefined,
-  session: {name: "polin"}
+  session: { name: "polin" }
 };
 
 SessionMenu.propTypes = {

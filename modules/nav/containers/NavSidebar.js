@@ -8,4 +8,4 @@ const mapDispatchToProps = dispatch => ({
   navResponsive: responsive => dispatch(navResponsive(responsive))
 });
 
-export default connect(() => ({}), mapDispatchToProps)(Component);
+export default connect(state => state.toggleFade, mapDispatchToProps)(Component);

@@ -6,7 +6,8 @@ export default (
     items: [
       { path: "/dashboard", label: "Dashboard" },
       { path: "/tasks", label: "Tasks" }
-    ]
+    ],
+    toggleFade: true
   },
   action
 ) => {
