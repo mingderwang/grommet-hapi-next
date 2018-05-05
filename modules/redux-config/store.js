@@ -5,11 +5,17 @@ import epics from './epics'
 import StateLoader from "./stateLoader"
 let store = null
 
-export default (reducer, initialState = {}) => {
+const disable = true;
+
+export default (reducer, initialState) => {
   const epicMiddleware = createEpicMiddleware(epics);
   const enhancers = composeWithDevTools(applyMiddleware(epicMiddleware))
+
+  if (disable) {
+     console.log(initialState)
+     store = createStore(reducer, initialState, enhancers)
+  }
   if (!store) {
-    // store = createStore(reducer, initialState, enhancers)
     const stateLoader = new StateLoader();
     store = createStore(reducer, stateLoader.loadState(), enhancers)
     store.subscribe(() => {
