@@ -1,11 +1,9 @@
-import { connect } from "react-redux";
-import { removeTodo } from "../actions";
-import Component from "../components/NavSidebar";
+import { connect } from 'react-redux'
+import { _toggle } from '../actions'
+import Component from '../components/NavSidebar'
 
 const mapDispatchToProps = dispatch => ({
-  navActivate: active => dispatch(navActivate(active)),
-  navEnable: enabled => dispatch(navEnable(enabled)),
-  navResponsive: responsive => dispatch(navResponsive(responsive))
-});
+  _toggle: () => dispatch(_toggle()),
+})
 
-export default connect(state => state.toggleFade, mapDispatchToProps)(Component);
+export default connect(state => state.nav, mapDispatchToProps)(Component)

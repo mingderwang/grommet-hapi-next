@@ -59,6 +59,9 @@ class TestParameter extends React.Component {
     date: PropTypes.string.isRequired,
   };
   static defaultProps = {
+    index: 'asdf',
+    hostname: 'asdf',
+    date: 'asdf',
   };
 }
 

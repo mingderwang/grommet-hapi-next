@@ -1,4 +1,4 @@
-export default ({ count = 0, increment, decrement }) =>
+export default ({ count =12, increment, decrement }) =>
   <div>
     <h1>{count}</h1>
     <button onClick={increment}>Increment</button>

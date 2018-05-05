@@ -1,3 +1,5 @@
+// if no cache in localstorage, count default is 3
+
 export default {
   nav: {
     name: 'Ming',
@@ -7,6 +9,7 @@ export default {
     items: [
       { path: "/dashboard", label: "Dashboard" },
       { path: "/tasks", label: "Tasks" }
-    ]
-  },
+    ],
+    toggle: true
+  }
 };
