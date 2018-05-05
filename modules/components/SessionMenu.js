@@ -33,7 +33,7 @@ class SessionMenu extends Component {
       <div>
         <Head>
           <link
-            href="//cdnjs.cloudflare.com/ajax/libs/grommet/1.0.1/grommet.min.css"
+            href="//cdnjs.cloudflare.com/ajax/libs/grommet/1.10.1/grommet.min.css"
             rel="stylesheet"
             type="text/css"
           />
