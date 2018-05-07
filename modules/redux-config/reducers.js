@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-//import { reducer as counter } from '~/counter'
-//import { reducer as reduxFormReducer } from 'redux-form'
+import { reducer as counter } from '~/counter'
+import { reducer as animate } from '~/animateTest'
+import { reducer as nav } from '~/nav'
 
 export default combineReducers({
- // counter,
- // form: reduxFormReducer,// mounted under "form"
+  nav,
+  counter,
+  animate,
 })
